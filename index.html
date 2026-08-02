@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Orivos — plataformas digitais que ligam pessoas, organizações e comunidades." />
+  <meta name="theme-color" content="#07171d" />
   <title>Orivos — Turning ideas into reality</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,68 +12,91 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <svg class="svg-defs" aria-hidden="true">
+    <defs>
+      <linearGradient id="orivosGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#90eee2"/>
+        <stop offset=".32" stop-color="#31c5b7"/>
+        <stop offset=".65" stop-color="#0d7480"/>
+        <stop offset="1" stop-color="#06242e"/>
+      </linearGradient>
+      <linearGradient id="orivosShade" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#041c24"/>
+        <stop offset=".55" stop-color="#0b5662"/>
+        <stop offset="1" stop-color="#67dfd2"/>
+      </linearGradient>
+      <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="10" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+  </svg>
+
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Orivos">
-        <span class="brand-mark" aria-hidden="true"><span></span></span>
-        <span class="brand-name">ORIVOS</span>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Orivos, início">
+        <svg class="brand-symbol" viewBox="0 0 120 120" role="img" aria-label="Símbolo Orivos">
+          <path d="M60 10c27 0 49 22 49 49 0 20-12 37-29 45-13 6-31 5-44-5C21 88 12 72 12 54 12 30 33 10 60 10Z" fill="url(#orivosGradient)"/>
+          <path d="M38 25c17-8 39-2 50 13 12 17 10 38-2 53-10 12-27 18-42 12 15-4 28-17 31-33 4-19-7-39-37-45Z" fill="#061a21" opacity=".93"/>
+          <path d="M38 25c-13 12-18 31-12 48 5 15 18 27 34 31-18-1-34-11-42-26-10-20-5-44 12-58 3-2 5-3 8-5Z" fill="url(#orivosShade)" opacity=".95"/>
+        </svg>
+        <span class="brand-word">ORIVOS</span>
       </a>
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#produtos">Produtos</a>
         <a href="#tecnologia">Tecnologia</a>
         <a href="#sobre">Sobre</a>
-        <a href="#carreiras">Carreiras</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="button button-small" href="#produtos">Entrar</a>
+      <a class="header-cta" href="#contacto">Entrar</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero section-dark">
-      <div class="orb orb-one"></div>
-      <div class="orb orb-two"></div>
+  <main id="inicio">
+    <section class="hero">
+      <div class="wave-lines" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">PRESENÇA DIGITAL</span>
           <h1>Building platforms<br>that <span>connect</span> people.</h1>
           <p>Plataformas digitais que simplificam, aproximam e transformam.</p>
-          <a class="button button-outline" href="#sobre">Saber mais</a>
+          <a class="button button-outline" href="#produtos">Saber mais</a>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-ring"><span></span></div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="symbol-glow"></div>
+          <svg class="hero-symbol" viewBox="0 0 120 120">
+            <path d="M60 10c27 0 49 22 49 49 0 20-12 37-29 45-13 6-31 5-44-5C21 88 12 72 12 54 12 30 33 10 60 10Z" fill="url(#orivosGradient)"/>
+            <path d="M38 25c17-8 39-2 50 13 12 17 10 38-2 53-10 12-27 18-42 12 15-4 28-17 31-33 4-19-7-39-37-45Z" fill="#061a21" opacity=".93"/>
+            <path d="M38 25c-13 12-18 31-12 48 5 15 18 27 34 31-18-1-34-11-42-26-10-20-5-44 12-58 3-2 5-3 8-5Z" fill="url(#orivosShade)" opacity=".95"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <section id="produtos" class="products section-dark">
+    <section id="produtos" class="products dark-section">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">ECOSSISTEMA ORIVOS</span>
-          <h2>Produtos pensados para realidades diferentes.</h2>
-        </div>
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-icon">◌</div>
-            <h3>ClubOS</h3>
+            <div class="product-icon">⚡</div>
+            <h2>ClubOS</h2>
             <p>Sistema operativo para clubes desportivos.</p>
-            <a href="#contacto" aria-label="Saber mais sobre ClubOS">→</a>
+            <a href="#contacto" aria-label="Conhecer o ClubOS">→</a>
           </article>
           <article class="product-card featured">
             <div class="product-icon">⌂</div>
-            <h3>JuntaOS</h3>
+            <h2>JuntaOS</h2>
             <p>Sistema operativo para juntas de freguesia e comunidades.</p>
-            <a href="#contacto" aria-label="Saber mais sobre JuntaOS">→</a>
+            <a href="#contacto" aria-label="Conhecer o JuntaOS">→</a>
           </article>
           <article class="product-card">
             <div class="product-icon heart">♡</div>
-            <h3>BetweenUs</h3>
+            <h2>BetweenUs</h2>
             <p>Plataforma social para relações e comunidades.</p>
-            <a href="#contacto" aria-label="Saber mais sobre BetweenUs">→</a>
+            <a href="#contacto" aria-label="Conhecer o BetweenUs">→</a>
           </article>
           <article class="product-card">
             <div class="product-icon">••</div>
-            <h3>Em breve</h3>
+            <h2>Em breve</h2>
             <p>Novas plataformas para novas realidades.</p>
             <a href="#contacto" aria-label="Conhecer futuros produtos">→</a>
           </article>
@@ -80,42 +104,32 @@
       </div>
     </section>
 
-    <section id="tecnologia" class="platform section-dark">
-      <div class="container platform-grid">
-        <div class="dashboard-mockup">
-          <div class="mockup-topbar"><span></span><span></span><span></span></div>
-          <div class="mockup-content">
-            <aside>
-              <b>ORIVOS</b>
-              <span>Dashboard</span>
-              <span>Membros</span>
-              <span>Eventos</span>
-              <span>Comunicação</span>
-              <span>Financeiro</span>
-            </aside>
-            <div class="mockup-main">
-              <h3>Bem-vindo, Ricardo.</h3>
-              <div class="stats">
-                <div><small>Membros ativos</small><strong>1.248</strong></div>
-                <div><small>Eventos</small><strong>32</strong></div>
-                <div><small>Receita</small><strong>€24.780</strong></div>
+    <section id="tecnologia" class="showcase dark-section">
+      <div class="container showcase-grid">
+        <div class="laptop">
+          <div class="screen">
+            <div class="app-top"><span class="mini-logo"></span><b>ORIVOS</b><small>Produtos&nbsp;&nbsp; Sobre&nbsp;&nbsp; Carreiras</small></div>
+            <div class="app-layout">
+              <aside><b>Dashboard</b><span>Membros</span><span>Eventos</span><span>Comunicação</span><span>Financeiro</span><span>Documentos</span><span>Configurações</span></aside>
+              <div class="app-main">
+                <h3>Bem-vindo, Ricardo.</h3>
+                <p>Aqui está o resumo da tua organização.</p>
+                <div class="stats"><div><small>Membros ativos</small><strong>1.248</strong></div><div><small>Eventos</small><strong>32</strong></div><div><small>Receita</small><strong>€24.780</strong></div></div>
+                <div class="dashboard-bottom"><div class="events"><b>Próximos eventos</b><span>Treino <small>Hoje · 19:00</small></span><span>Convívio Geral <small>25 Mai · 11:00</small></span><span>Torneio Regional <small>07 Jun · 10:00</small></span></div><div class="chart"><b>Evolução mensal</b><i></i></div></div>
               </div>
-              <div class="chart"><span></span></div>
             </div>
           </div>
+          <div class="laptop-base"></div>
         </div>
-        <div class="phone-mockup">
-          <div class="speaker"></div>
-          <div class="phone-screen">
-            <small>ClubOS</small>
-            <h3>Olá, João</h3>
-            <div class="phone-icons"><span>◌</span><span>♙</span><span>⌁</span></div>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-content">
+            <small>ClubOS</small><h3>Olá, João</h3>
+            <div class="mobile-actions"><span>▣<small>Eventos</small></span><span>♙<small>Membros</small></span><span>⌁<small>Comunicação</small></span></div>
             <p>Próximos eventos</p>
-            <ul>
-              <li><b>Treino</b><small>Hoje · 19:00</small></li>
-              <li><b>Jogo</b><small>24 Mai · 17:00</small></li>
-              <li><b>Reunião</b><small>30 Mai · 21:00</small></li>
-            </ul>
+            <div class="mobile-event"><b>Treino</b><small>Hoje · 19:00</small></div>
+            <div class="mobile-event"><b>Jogo</b><small>24 Mai · 17:00</small></div>
+            <div class="mobile-event"><b>Reunião</b><small>30 Mai · 21:00</small></div>
           </div>
         </div>
       </div>
@@ -123,43 +137,23 @@
 
     <section id="sobre" class="about">
       <div class="container about-grid">
-        <div>
-          <span class="eyebrow dark">A MARCA</span>
-          <h2>Da imaginação para a realidade.</h2>
-        </div>
-        <div class="about-copy">
-          <p>Orivos representa o momento em que uma ideia deixa de ser apenas um pensamento e se torna algo real.</p>
-          <p>Transformamos imaginação em plataformas digitais que ligam pessoas, organizações e comunidades.</p>
-        </div>
+        <div><span class="eyebrow dark">A MARCA</span><h2>Ideias que atravessam o limiar.</h2></div>
+        <div><p>Orivos representa o momento em que uma ideia deixa de ser apenas imaginação e se torna algo real.</p><p>Construímos plataformas digitais que ligam pessoas, organizações e comunidades.</p></div>
       </div>
-      <div class="container values-grid">
-        <article><span>◉</span><h3>Propósito</h3><p>Transformar ideias em plataformas que melhoram a vida das pessoas.</p></article>
-        <article><span>↗</span><h3>Missão</h3><p>Criar plataformas digitais intuitivas que ligam pessoas e organizações.</p></article>
-        <article><span>◇</span><h3>Visão</h3><p>Ser uma referência europeia em ecossistemas digitais para comunidades.</p></article>
-      </div>
-    </section>
-
-    <section id="carreiras" class="careers section-dark">
-      <div class="container split">
-        <div><span class="eyebrow">CARREIRAS</span><h2>Construir o futuro exige pessoas que pensem diferente.</h2></div>
-        <div><p>Procuramos pessoas curiosas, rigorosas e humanas. Gente que simplifica, questiona e constrói.</p><a class="button" href="mailto:careers@orivos.com">Falar connosco</a></div>
+      <div class="container values">
+        <article><span>01</span><h3>Propósito</h3><p>Transformar ideias em produtos digitais com impacto real.</p></article>
+        <article><span>02</span><h3>Missão</h3><p>Criar plataformas simples, humanas e tecnicamente sólidas.</p></article>
+        <article><span>03</span><h3>Visão</h3><p>Ser uma referência europeia na criação de ecossistemas digitais.</p></article>
       </div>
     </section>
 
     <section id="contacto" class="contact">
-      <div class="container contact-card">
-        <div><span class="eyebrow dark">CONTACTO</span><h2>Tem uma ideia? Vamos torná-la real.</h2></div>
-        <a class="button" href="mailto:hello@orivos.com">hello@orivos.com</a>
-      </div>
+      <div class="container contact-panel"><div><span class="eyebrow">CONTACTO</span><h2>Tem uma ideia?<br>Vamos torná-la real.</h2></div><a class="button" href="mailto:hello@orivos.com">hello@orivos.com</a></div>
     </section>
   </main>
 
-  <footer class="footer section-dark">
-    <div class="container footer-wrap">
-      <div class="brand"><span class="brand-mark"><span></span></span><span class="brand-name">ORIVOS</span></div>
-      <p>Turning ideas into reality.</p>
-      <small>© 2026 Orivos. Todos os direitos reservados.</small>
-    </div>
+  <footer>
+    <div class="container footer-inner"><a class="brand" href="#inicio"><svg class="brand-symbol" viewBox="0 0 120 120"><path d="M60 10c27 0 49 22 49 49 0 20-12 37-29 45-13 6-31 5-44-5C21 88 12 72 12 54 12 30 33 10 60 10Z" fill="url(#orivosGradient)"/><path d="M38 25c17-8 39-2 50 13 12 17 10 38-2 53-10 12-27 18-42 12 15-4 28-17 31-33 4-19-7-39-37-45Z" fill="#061a21" opacity=".93"/><path d="M38 25c-13 12-18 31-12 48 5 15 18 27 34 31-18-1-34-11-42-26-10-20-5-44 12-58 3-2 5-3 8-5Z" fill="url(#orivosShade)" opacity=".95"/></svg><span class="brand-word">ORIVOS</span></a><p>Turning ideas into reality.</p><small>© 2026 Orivos</small></div>
   </footer>
 </body>
 </html>
