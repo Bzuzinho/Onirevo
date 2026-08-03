@@ -1,6 +1,6 @@
-# Orivos
+# Onirevo
 
-Website institucional da Orivos, construído a partir do conceito visual aprovado para a marca.
+Website institucional da Onirevo, construído a partir do conceito visual aprovado para a marca.
 
 ## Estrutura
 
